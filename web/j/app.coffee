@@ -2,9 +2,6 @@ define ["jquery", "underscore", "backbone", "cs!twitter"
 ], ($, _, Backbone, Twitter) -> $ ->
 
   class Tweet extends Backbone.Model
-    validate: (attrs) ->
-      if attrs.text.length > 140
-        return "A tweet cannot be longer than 140 characters"
 
   class Tweets extends Backbone.Collection
     model: Tweet
@@ -44,24 +41,11 @@ define ["jquery", "underscore", "backbone", "cs!twitter"
     removeTweet: (tweet) =>
       tweet.view.remove()
 
-  class Input extends Backbone.View
-    events:
-      "keydown": "onKeydown"
-
-    onKeydown: (e) =>
-      if e.keyCode == 13
-        text = @$el.val()
-        @$el.val("")
-        twitter.tweet(text)
-
   window.tweets = tweets = new Tweets()
 
   window.list = list = new TweetList
     collection: tweets
     el: $("#tweets")
-
-  window.input = input = new Input
-    el: $("#entry")
 
   twitter = new Twitter
   twitter.on "tweet", (tweet) ->

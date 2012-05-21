@@ -35,30 +35,56 @@ body {
 
 div.container {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 480px;
-    margin-left: -240px;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
     background-color: #ddd;
     box-shadow: 0 0 32px black;
+}
+
+#slides {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 20em;
+    margin: 1em;
+}
+
+#slides h1 {
+    position: absolute;
+    top: 0pt;
+    left: 0;
+    right: 0;
+    height: 88pt;
+    margin: 0;
+    text-align: center;
+}
+
+#slides object {
+    width: 100%;
+    height: 100%;
+}
+
+#slides div.sponsor {
+    position: absolute;
+    top: 144pt;
+    left: 0;
+    right: 0;
+    bottom: 64pt;
 }
 
 #tweets {
     position: absolute;
     top: 0;
-    bottom: 30pt;
-    left: 0;
-    right: 0;
-    overflow-y: scroll;
-}
-
-#entry {
-    position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
-    height: 24pt;
+    width: 20em;
+    overflow-y: hidden;
+    box-shadow: 0 0 32px black;
 }
 
 #tweets li {
@@ -103,4 +129,19 @@ div.container {
 
 #tweets .retweet span.user:after {
     content: "";
+}
+
+#tweets span.link {
+    color: #0064cd;
+    cursor: pointer;
+}
+
+#tweets span.handle {
+    color: #347a34;
+    cursor: pointer;
+}
+
+#tweets span.hashtag {
+    color: #c3325f;
+    cursor: pointer;
 }

@@ -36,6 +36,10 @@ class TwitterStream extends events.EventEmitter
     else if tweet.friends?
       @emit "friends", tweet.friends
     else if tweet.created_at?
+      tweet.text = tweet.text
+        .replace(/http:\/\/t.co\/[0-9a-z]+/gi, "<span class=\"link\">http://...</span>")
+        .replace(/@[0-9a-z_]+/gi, "<span class=\"handle\">$&</span>")
+        .replace(/#[0-9a-z_-]+/gi, "<span class=\"hashtag\">$&</span>")
       @tweets.push tweet
       @tweets = (_.sortBy @tweets, "id").reverse()[..20]
       @emit "tweet", tweet
@@ -45,9 +49,10 @@ class TwitterStream extends events.EventEmitter
 
 stream = new TwitterStream()
 
-t.stream "user", (s) ->
+t.stream "statuses/filter", { "track": "#wr2012,webrebels,web_rebels,web rebels" }, (s) ->
   s.on "data", (data) ->
-    stream.add data
+    if not data.retweeted_status?
+      stream.add data
   s.on "error", (error) ->
     console.log util.inspect error
     stream.emit "error", error
@@ -55,9 +60,13 @@ t.stream "user", (s) ->
     console.log "****** ERROR: Twitter stream terminated!"
     stream.emit "end", {}
 
-t.getHomeTimeline (data) ->
-  for tweet in data
-    stream.add tweet
+t.search "#wr2012 OR webrebels OR web_rebels OR \"web rebels\"", { "result_type": "recent", "rpp": "20" }, (data) ->
+  for tweet in data.results
+    if not tweet.text.match(/^RT @/)
+      tweet.user =
+        screen_name: tweet.from_user
+        profile_image_url: tweet.profile_image_url
+      stream.add tweet
 
 io.sockets.on "connection", (socket) ->
   streamEmitter = (data) ->
