@@ -69,12 +69,27 @@ div.container {
     height: 100%;
 }
 
-#slides div.sponsor {
+div.sponsor {
     position: absolute;
     top: 144pt;
-    left: 0;
-    right: 0;
+    left: 24pt;
+    right: 24pt;
     bottom: 64pt;
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateY(-100%);
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+}
+
+div.sponsor.current-slide + div.sponsor {
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateY(100%);
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+}
+
+div.sponsor.current-slide {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
 }
 
 #tweets {

@@ -52,3 +52,18 @@ define ["jquery", "underscore", "backbone", "cs!twitter"
     tweets.add(new Tweet(tweet))
   twitter.on "delete", (id) ->
     tweets.remove(tweets.get(id))
+
+
+  # Sponsor slides
+
+  findNextSlide = (current) ->
+    next = current.next(".sponsor")
+    if next.length then next else $("#slides .sponsor").first()
+  cycleSlides = ->
+    findNextSlide($(".current-slide").removeClass("current-slide")).addClass("current-slide")
+
+  $("#slides .sponsor").first().addClass("current-slide")
+
+  window.nextSlide = cycleSlides
+
+  setInterval cycleSlides, 6000
