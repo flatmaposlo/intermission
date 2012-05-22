@@ -20,7 +20,7 @@ port = parseInt(process.env.PORT, 10) or 1337
 app.listen port
 console.log "Listening on http://localhost:#{port}/"
 
-twitter_config = JSON.parse(fs.readFileSync(path.join(process.env.HOME, ".twitter-auth.json"), "utf8"))
+twitter_config = JSON.parse(fs.readFileSync("twitter-auth.json", "utf8"))
 
 t = new twitter(twitter_config)
 
