@@ -13,13 +13,14 @@
 
 body, div, input {
     font-family: "Ubuntu";
-    font-size: 16pt;
+o    font-size: 16pt;
     line-height: 1.5;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 html {
@@ -39,22 +40,30 @@ div.container {
     bottom: 1em;
     left: 1em;
     right: 1em;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-radius: 1em;
     background-color: #ddd;
     box-shadow: 0 0 32px black;
 }
 
-#slides {
+#sponsors {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 20em;
     margin: 1em;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
 }
 
-#slides h1 {
+#sponsors.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+#sponsors h1 {
     position: absolute;
     top: 0pt;
     left: 0;
@@ -64,7 +73,7 @@ div.container {
     text-align: center;
 }
 
-#slides object {
+object {
     width: 100%;
     height: 100%;
 }
@@ -94,6 +103,15 @@ div.sponsor.current-slide {
     width: 20em;
     overflow-y: hidden;
     box-shadow: 0 0 32px black;
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+#tweets.active {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
 }
 
 #tweets li {
@@ -153,4 +171,150 @@ div.sponsor.current-slide {
 #tweets span.hashtag {
     color: #c3325f;
     cursor: pointer;
+}
+
+#slides {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1em;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+#slides.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+div.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+
+    text-align: center;
+}
+
+div.slide.current-slide {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+div.slide section {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 96%;
+}
+
+div.slide:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+}
+
+div.slide h1 {
+    font-size: 64pt;
+    margin: 0;
+    font-weight: normal;
+    border-bottom: 2px groove #ddd;
+}
+
+div.slide h1.p01 {
+    font-size: 62pt;
+}
+
+div.slide h2 {
+    font-size: 40pt;
+    margin: 0;
+    font-weight: normal;
+}
+
+div.slide h3 {
+    font-size: 32pt;
+    margin: 0;
+    font-weight: normal;
+}
+
+table.organisers {
+    margin: 0 auto;
+}
+
+table.organisers td:first-child img {
+    margin: 4px 0 -4px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+table.organisers td {
+    text-align: left;
+    font-size: 40px;
+    line-height: 48px;
+    height: 48px;
+}
+
+table.organisers td:first-child {
+    text-align: right;
+}
+
+table.organisers td:nth-child(2) {
+    padding-left: 12px;
+}
+
+div.satan {
+    background: url(m/satan.svg) no-repeat 50%;
+}
+
+div.satan h1, div.satan h2 {
+    color: white;
+    text-shadow: 0 0 16px black;
+}
+
+div.puppies {
+    background: url(m/puppies.jpg) no-repeat 50%;
+    background-size: contain;
+}
+
+div.puppies h1 {
+    color: pink;
+    text-shadow: 0 0 16px black;
+}
+
+div.puppies h1, div.satan h1 {
+    border: none;
+}
+
+div.rfc1149 {
+    background: url(m/avian-carrier.jpg) no-repeat 50%;
+    background-size: contain;
+}
+
+div.toilet {
+    background: url(m/toilet.jpg) no-repeat 50%;
+    background-size: contain;
+}
+
+div.fire {
+    background: url(m/fire.jpg) no-repeat 50%;
+    background-size: contain;
+}
+
+div.slide h1 img {
+    width: 64pt;
+    height: 64pt;
+    margin: 0 0 -8pt 0;
+    border-radius: 8pt;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
 }
