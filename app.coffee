@@ -49,8 +49,9 @@ class TwitterStream extends events.EventEmitter
 
 stream = new TwitterStream()
 
-t.stream "statuses/filter", { "track": "#wr2012,webrebels,web_rebels,web rebels" }, (s) ->
+t.stream "statuses/filter", { "follow": "474087360" }, (s) ->
   s.on "data", (data) ->
+    console.log data
     if not data.retweeted_status?
       stream.add data
   s.on "error", (error) ->
@@ -60,12 +61,9 @@ t.stream "statuses/filter", { "track": "#wr2012,webrebels,web_rebels,web rebels"
     console.log "****** ERROR: Twitter stream terminated!"
     stream.emit "end", {}
 
-t.search "#wr2012 OR webrebels OR web_rebels OR \"web rebels\"", { "result_type": "recent", "rpp": "20" }, (data) ->
-  for tweet in data.results
+t.getUserTimeline { "screen_name": "flatmaposlo", "count": "20" }, (data) ->
+  for tweet in data
     if not tweet.text.match(/^RT @/)
-      tweet.user =
-        screen_name: tweet.from_user
-        profile_image_url: tweet.profile_image_url
       stream.add tweet
 
 io.sockets.on "connection", (socket) ->

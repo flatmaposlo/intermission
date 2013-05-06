@@ -13,7 +13,7 @@
 
 body, div, input {
     font-family: "Ubuntu";
-o    font-size: 16pt;
+    font-size: 18pt;
     line-height: 1.5;
 }
 
@@ -69,8 +69,9 @@ div.container {
     left: 0;
     right: 0;
     height: 88pt;
-    margin: 0;
+    margin: 0 -0.5em;
     text-align: center;
+    background-color: #333333;
 }
 
 object {
@@ -93,6 +94,19 @@ div.sponsor.current-slide {
     opacity: 1;
     -webkit-transform: scale(1);
     -webkit-transition: -webkit-transform 0.6s ease, opacity 0.6s ease;
+}
+
+div.sponsor ul {
+    margin: 0;
+}
+
+div.sponsor li {
+    display: block;
+    list-style: none;
+}
+
+div.sponsor li h1 {
+
 }
 
 #tweets {
@@ -144,7 +158,7 @@ div.sponsor.current-slide {
 }
 
 #tweets .retweet {
-    font-size: 14pt;
+    font-size: 0.9em;
     color: #888;
     text-align: right;
 }
@@ -317,4 +331,17 @@ div.slide h1 img {
     margin: 0 0 -8pt 0;
     border-radius: 8pt;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+}
+
+table.schedule {
+    width: 100%;
+}
+
+table.schedule th {
+    white-space: nowrap;
+}
+
+table.schedule td {
+    background-color: white;
+    border: 1px groove white;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web Rebels 2012</title>
+    <title>flatMap(Oslo)</title>
     <link rel="stylesheet" href="/screen.css">
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
@@ -29,22 +29,25 @@
     <div class="container">
       <div id="sponsors">
         <h1>
-          <object type="image/svg+xml" data="m/webrebels.svg"></object>
+          <object type="image/svg+xml" data="m/flatmap.svg"></object>
         </h1>
         <div class="sponsor">
+          <object type="image/svg+xml" data="m/conax.svg"></object>
+        </div>
+        <div class="sponsor">
+          <object type="image/svg+xml" data="m/miles.svg"></object>
+        </div>
+        <div class="sponsor">
+          <object type="image/svg+xml" data="m/kodemaker.svg"></object>
+        </div>
+        <div class="sponsor">
+          <object type="image/svg+xml" data="m/itera.svg"></object>
+        </div>
+        <div class="sponsor">
+          <object type="image/svg+xml" data="m/basho.svg"></object>
+        </div>
+        <div class="sponsor">
           <object type="image/svg+xml" data="m/bekk.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/opera.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/microsoft.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/apdm.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/kantega.svg"></object>
         </div>
         <div class="sponsor">
           <object type="image/svg+xml" data="m/arktekk.svg"></object>
@@ -56,172 +59,269 @@
           <object type="image/svg+xml" data="m/finn.svg"></object>
         </div>
         <div class="sponsor">
-          <object type="image/svg+xml" data="m/daldata.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/skalar.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/nokia.svg"></object>
-        </div>
-        <div class="sponsor">
-          <object type="image/svg+xml" data="m/rim.svg"></object>
-        </div>
-        <div class="sponsor">
           <object type="image/svg+xml" data="m/webstep.svg"></object>
         </div>
         <div class="sponsor">
           <object type="image/svg+xml" data="m/iterate.svg"></object>
         </div>
         <div class="sponsor">
-          <object type="image/svg+xml" data="m/skillsmatter.svg"></object>
+          <object type="image/svg+xml" data="m/aperture.svg"></object>
         </div>
       </div>
       <div id="slides">
         <div class="slide">
           <section>
-            <object type="image/svg+xml" data="m/webrebels.svg"></object>
-          </section>
-        </div>
-        <div class="slide">
-          <section>
-            <table class="organisers">
+            <table class="schedule">
               <tbody>
-                <tr><td><img src="m/bodil.jpg"></td><td>@bodiltv</td></tr>
-                <tr><td><img src="m/espen.jpg"></td><td>@leftiefriele</td></tr>
-                <tr><td><img src="m/gregers.jpg"></td><td>@gregersrygg</td></tr>
-                <tr><td><img src="m/sveinung.png"></td><td>@sveisvei</td></tr>
-                <tr><td><img src="m/thomas.jpg"></td><td>@thomanil</td></tr>
-                <tr><td><img src="m/trygve.png"></td><td>@trygve_lie</td></tr>
+                <tr>
+                  <th></th>
+                  <th>Monday Track 1</th>
+                  <th>Monday Track 2</th>
+                </tr>
+                <tr>
+                  <th>09:00–10:00</th>
+                  <td colspan="2" class="keynote">
+                    <div class="speaker">Daniel Spiewak: Living in a Post-Functional World</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>10:10–10:50</th>
+                  <td>
+                    <div class="speaker">Vraalsen: Java 8 to the rescue!?</div>
+                  </td>
+                  <td>
+                    <div class="speaker">Lawley: From Dynamic to Static</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>11:20–12:00</th>
+                  <td>
+                      <div class="speaker">Zaugg: What's new in Scala 2.10?</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Gott & Teigen: Scala Intro</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>12:10–12:50</th>
+                  <td>
+                    <div class="speaker">Sabin: Shapeless</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>13:50–14:30</th>
+                  <td>
+                    <div class="speaker">Stokke: What Every Hipster Should Know</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Spiewak: TBD</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>14:40–15:20</th>
+                  <td>
+                    <div class="speaker">Follesø: F# Type Providers</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>15:50–16:30</th>
+                  <td>
+                    <div class="speaker">Bakstad: Composable Abstractions in Clojure</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Sabin: Shapeless</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>16:40–17:20</th>
+                  <td>
+                    <div class="speaker">Høst & Winje: Practical Lambda Calculus</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>17:20–</th>
+                  <td colspan="2" class="interlude">Dinner & party</td>
+                </tr>
               </tbody>
             </table>
           </section>
         </div>
         <div class="slide">
           <section>
-            <table class="organisers">
+            <table class="schedule">
               <tbody>
-                <tr><td>Wifi:</td><td>WR2012_*</td></tr>
-                <tr><td>Hashtag:</td><td>#wr2012</td></tr>
+                <tr>
+                  <th></th>
+                  <th>Tuesday Track 1</th>
+                  <th>Tuesday Track 2</th>
+                </tr>
+                <tr>
+                  <th>09:00–10:00</th>
+                  <td colspan="2" class="keynote">
+                      <div class="speaker">Friedman & Byrd: Fun with Relational Interpreters in miniKanren</div>
+                   </td>
+                </tr>
+                <tr>
+                  <th>10:10–10:50</th>
+                  <td>
+                    <div class="speaker">Blakstad: Scala REST API</div>
+                  </td>
+                  <td>
+                    <div class="speaker">TBD</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>11:20–12:00</th>
+                  <td>
+                    <div class="speaker">Teigen: Unfiltered Directives</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Westheide: Event Sourcing</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>12:10–12:50</th>
+                  <td>
+                    <div class="speaker">Hamblen: Sketching in Scala Notebook</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>13:50–14:30</th>
+                  <td>
+                    <div class="speaker">Lilleaas: WTF is Datomic?</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Zaugg: Welcome to (Macro) Paradise</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>14:40–15:20</th>
+                  <td>
+                    <div class="speaker">Waaler: From Grid to Akka!</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>15:50–16:30</th>
+                  <td>
+                    <div class="speaker">Klang: Introducing Akka 2.2</div>
+                  </td>
+                  <td rowspan="2" class="workshop">
+                    <div class="speaker">Hamblen & Teigen: Unfiltered and Dispatch</div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>16:40–17:20</th>
+                  <td>
+                      <div class="speaker">Jørgensen: Economies of Scala</div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </section>
         </div>
-        <div class="slide rfc1149"> </div>
-        <div class="slide toilet"> </div>
-        <div class="slide fire"> </div>
-        <div class="slide satan">
+        <div class="slide">
           <section>
-            <h1>PHONES ON MUTE</h1>
-            <h2>DON'T TEST US</h2>
-          </section>
-        </div>
-        <div class="slide puppies">
-          <section>
-            <h1>ENJOY!</h1>
+            <object type="image/svg+xml" data="m/flatmap.svg"></object>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/jake.jpg"> Jake Archibald</h1>
-            <h2>Application Cache Douchebag</h2>
+            <h1>Daniel Spiewak</h1>
+            <h2>Living in a Post-Functional World</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/erlend.jpg"> Erlend Oftedal</h1>
-            <h2>Securing a JavaScript Based<br>Web Application</h2>
+            <h1><img src="m/vraalsen.jpg"> Fredrik Vraalsen</h1>
+            <h2>Java 8 to the rescue!?</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/august.jpg"> August Lilleaas</h1>
-            <h2>The Missing Link in<br>Single Page Web Applications</h2>
+            <h1><img src="m/zaugg.jpg"> Jason Zaugg</h1>
+            <h2>What's new in Scala 2.10?</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/vyacheslav.jpg"> Vyacheslav Egorov</h1>
-            <h2>V8 Inside Out</h2>
+            <h1><img src="m/sabin.jpg"> Miles Sabin</h1>
+            <h2>Shapeless</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/bernd.jpg"> Bernd Mrohs</h1>
-            <h2>Challenges Creating a<br>Mobile HTML5 Framework<br>for
-            Location Based Apps</h2>
+            <h1><img src="m/bodil.jpg"> Bodil Stokke</h1>
+            <h2>What Every Hipster Should Know</h2>
+            <h2>About Functional Programming</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/michal.jpg"> Michal Budzynski</h1>
-            <h2>Hey Flash, Can You Do This?<br>HTML5 Can!</h2>
+            <h1><img src="m/follesoe.jpg"> Jonas Follesø</h1>
+            <h2>F# Type Providers</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1 class="p01"><img src="m/p01.jpg"> Mathieu "p01" Henri</h1>
-            <h2>Creative Coding And<br>Size Optimization</h2>
+            <h1><img src="m/bakstad.jpg"> Erik Bakstad</h1>
+            <h2>Composable Abstractions in Clojure</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/nikolai.jpg"> Nikolai Onken</h1>
-            <h2>Bikeshed, a Beautiful Open Web</h2>
+            <h1><img src="m/host.jpg"><img src="m/winje.jpg"> Einar&nbsp;Høst & Jonas&nbsp;Winje</h1>
+            <h2>Practical Lambda Calculus</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/jerome.jpg"> Jérôme Etienne</h1>
-            <h2>Creating a WebGL Game In Less Than 10 Minutes With tQuery.js</h2>
+            <h1><img src="m/will.jpg"><img src="m/dan.jpg"> Will&nbsp;Byrd & Dan&nbsp;Friedman</h1>
+            <h2>Fun with Relational Interpreters</h2>
+            <h2>in miniKanren</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/zed.jpg">Zed A. Shaw</h1>
-            <h2>The Web Will Die<br>When OOP Dies</h2>
+            <h1><img src="m/blakstad.jpg"> Kåre Blakstad</h1>
+            <h2>Building a Scala REST API</h2>
+            <h2>adaptation and experiences</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/david.jpg"> David Herman</h1>
-            <h2>The JavaScript Virtual Machine</h2>
+            <h1><img src="m/teigen.jpg"> Jon-Anders Teigen</h1>
+            <h2>Unfiltered Directives</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/felix.jpg"> Felix Geisendörfer</h1>
-            <h2>Node.js In Production</h2>
+            <h1><img src="m/hamblen.jpg"> Nathan Hamblen</h1>
+            <h2>Sketching in Scala Notebook</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/glenn.jpg"> Glenn Block</h1>
-            <h2>Developing API Wrappers With Node, Lessons Learned Building the Azure npm</h2>
+            <h1><img src="m/lilleaas.jpg"> August Lilleaas</h1>
+            <h2>WTF is Datomic?</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/jari.jpg"> Jari Bakken</h1>
-            <h2>Automating 130 Browser, Platform and Language Combinations<br>Without Going Insane</h2>
+            <h1><img src="m/waaler.jpg"> Eivind Waaler</h1>
+            <h2>From Grid to Akka!</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/brian.jpg"> Brian Leroux</h1>
-            <h2>Billion Dollar App Walkthrough</h2>
+            <h1><img src="m/klang.jpg"> Viktor Klang</h1>
+            <h2>Distributed Reactive Programming:</h2>
+            <h2>Introducing Akka 2.2</h2>
           </section>
         </div>
         <div class="slide">
           <section>
-            <h1><img src="m/addy.jpg"> Addy Osmani</h1>
-            <h2>JavaScript Decoupling<br>vs The World</h2>
-          </section>
-        </div>
-        <div class="slide">
-          <section>
-            <h1><img src="m/christian.png"> Christian Johansen</h1>
-            <h2>Pure, Functional JavaScript</h2>
+            <h1><img src="m/simen.jpg"> Simen Fure Jørgensen</h1>
+            <h2>Economies of Scala</h2>
           </section>
         </div>
         <div class="slide">
